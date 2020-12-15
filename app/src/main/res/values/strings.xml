@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">CFP_Exactly</string>
+    <string name="app_name">CFP Exactly</string>
+    <string name="search">Search</string>
+    <string name="searchBT">Button</string>
 </resources>

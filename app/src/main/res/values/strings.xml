@@ -2,4 +2,5 @@
     <string name="app_name">CFP Exactly</string>
     <string name="search">Search</string>
     <string name="searchBT">Button</string>
+    <string name="titleCFP">CFP title</string>
 </resources>

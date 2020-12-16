@@ -1,6 +1,7 @@
 package Activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.SearchView;
@@ -22,7 +23,9 @@ public class SearchActivity extends Activity {
         searchBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                Toast.makeText(getBaseContext(), s, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getBaseContext(), SearchListActivity.class);
+                startActivity(intent);
+
                 return false;
             }
 

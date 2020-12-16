@@ -12,13 +12,15 @@ public class SearchResultActivity extends Activity {
     private DBHelper CFPDB;
     private CFPInfo info;
 
+    private Integer queryId;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_result_layout);
 
         Intent intent = getIntent();
-        
+
         CFPDB = new DBHelper(this);
 
     }

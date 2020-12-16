@@ -15,4 +15,76 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:id="@+id/CFP_abbreviation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/abbreviationCFP" />
+
+    <TextView
+        android:id="@+id/CFP_abbreviation_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/CFP_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/urlCFP" />
+
+    <TextView
+        android:id="@+id/CFP_url_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/CFP_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chartCFP" />
+
+    <TextView
+        android:id="@+id/CFP_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/locationCFP" />
+
+    <TextView
+        android:id="@+id/CFP_location_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/CFP_event_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/event_dateCFP" />
+
+    <TextView
+        android:id="@+id/CFP_event_date_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/CFP_submission_deadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/submission_deadlineCFP" />
+
+    <TextView
+        android:id="@+id/CFP_submission_deadline_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/CFP_outline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/outlineCFP" />
+
+    <TextView
+        android:id="@+id/CFP_outline_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

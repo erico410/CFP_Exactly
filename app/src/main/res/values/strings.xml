@@ -2,5 +2,12 @@
     <string name="app_name">CFP Exactly</string>
     <string name="search">Search</string>
     <string name="searchBT">Button</string>
-    <string name="titleCFP">CFP title</string>
+    <string name="titleCFP">CFP Title</string>
+    <string name="abbreviationCFP">CFP Abbreviation</string>
+    <string name="urlCFP">CFP URL</string>
+    <string name="chartCFP">CFP Chart</string>
+    <string name="locationCFP">CFP Location</string>
+    <string name="event_dateCFP">CFP Event Date</string>
+    <string name="submission_deadlineCFP">CFP Submission Deadline</string>
+    <string name="outlineCFP">CFP Outline</string>
 </resources>

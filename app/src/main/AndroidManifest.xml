@@ -23,11 +23,15 @@
         </activity>
 
         <activity android:name=".SearchListActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".SearchResultActivity">
-
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+            </intent-filter>
         </activity>
 
     </application>

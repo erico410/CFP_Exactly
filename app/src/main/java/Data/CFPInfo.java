@@ -3,22 +3,22 @@ package Data;
 import java.util.Date;
 
 public class CFPInfo {
-    private Integer id;
+    private Integer eventId;
     private String title;
     private String abbreviation;
     private String url;
     private String location;
-    private Date eventDateBegin;
-    private Date eventDateEnd;
-    private Date submissionDeadline;
+    private String eventDateBegin;
+    private String eventDateEnd;
+    private String submissionDeadline;
     private String outline;
 
-    public Integer getId() {
-        return id;
+    public Integer getEventId() {
+        return eventId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setEventId(Integer eventId) {
+        this.eventId = eventId;
     }
 
     public String getTitle() {
@@ -53,27 +53,27 @@ public class CFPInfo {
         this.location = location;
     }
 
-    public Date getEventDateBegin() {
+    public String getEventDateBegin() {
         return eventDateBegin;
     }
 
-    public void setEventDateBegin(Date eventDateBegin) {
+    public void setEventDateBegin(String eventDateBegin) {
         this.eventDateBegin = eventDateBegin;
     }
 
-    public Date getEventDateEnd() {
+    public String getEventDateEnd() {
         return eventDateEnd;
     }
 
-    public void setEventDateEnd(Date eventDateEnd) {
+    public void setEventDateEnd(String eventDateEnd) {
         this.eventDateEnd = eventDateEnd;
     }
 
-    public Date getSubmissionDeadline() {
+    public String getSubmissionDeadline() {
         return submissionDeadline;
     }
 
-    public void setSubmissionDeadline(Date submissionDeadline) {
+    public void setSubmissionDeadline(String submissionDeadline) {
         this.submissionDeadline = submissionDeadline;
     }
 

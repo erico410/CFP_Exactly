@@ -10,6 +10,7 @@
     <string name="event_dateCFP">CFP Event Date</string>
     <string name="submission_deadlineCFP">CFP Submission Deadline</string>
     <string name="outlineCFP">CFP Outline</string>
+
     <string name="ReadMe">Readme:\n\t
         Interface:\n\t
         main page\n\t
@@ -26,4 +27,5 @@
     </string>
     <string name="RESULT_OF">Results of</string>
     <string name="searchInput">Test</string>
+
 </resources>

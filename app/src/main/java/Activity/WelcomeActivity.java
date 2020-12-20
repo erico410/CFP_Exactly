@@ -16,7 +16,7 @@ public class WelcomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_layout);
 
-        searchBT = (Button) findViewById(R.id.searchBT);
+        searchBT = (Button) findViewById(R.id.searchBarBT);
 
         searchBT.setOnClickListener(new View.OnClickListener() {
             @Override

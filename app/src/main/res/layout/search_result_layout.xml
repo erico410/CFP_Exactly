@@ -2,89 +2,125 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CC000000"
     android:orientation="vertical">
+
+    <Button
+        android:id="@+id/backListBT"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/backList"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#BEFFFFFF" />
 
     <TextView
         android:id="@+id/CFP_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/titleCFP" />
+        android:text="@string/titleCFP"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/CFP_title_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/CFP_abbreviation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/abbreviationCFP" />
+        android:text="@string/abbreviationCFP"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/CFP_abbreviation_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#2196F3" />
 
     <TextView
         android:id="@+id/CFP_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/urlCFP" />
+        android:text="@string/urlCFP"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/CFP_url_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#2196F3" />
 
     <TextView
         android:id="@+id/CFP_chart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/chartCFP" />
+        android:text="@string/chartCFP"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/CFP_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/locationCFP" />
+        android:text="@string/locationCFP"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/CFP_location_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#2196F3"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/CFP_event_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/event_dateCFP" />
+        android:text="@string/event_dateCFP"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/CFP_event_date_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#2196F3"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/CFP_submission_deadline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/submission_deadlineCFP" />
+        android:text="@string/submission_deadlineCFP"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/CFP_submission_deadline_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="#2196F3"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/CFP_outline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/outlineCFP" />
+        android:text="@string/outlineCFP"
+        android:textColor="#3F51B5" />
 
     <TextView
         android:id="@+id/CFP_outline_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="8sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF" />
 
 </LinearLayout>

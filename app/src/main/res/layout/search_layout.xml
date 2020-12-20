@@ -1,24 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#CD000000">
+
+    <TextView
+        android:id="@+id/KeyWords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/backBT"
+        android:layout_marginTop="50dp"
+        android:text="@string/searchKeywords"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/backBT"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="@string/backMain"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#BEFFFFFF"
+        android:typeface="normal" />
 
     <SearchView
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        
-        >
-    </SearchView>
+        android:layout_height="65dp"
+
+        android:layout_alignTop="@id/KeyWords"
+        android:layout_marginTop="50dp"></SearchView>
 
     <Button
-        android:id="@+id/searchBT"
+        android:id="@+id/searchBarBT"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/search_bar"
-        android:layout_alignStart="@id/search_bar"
-        android:layout_marginStart="10dp"
+        android:layout_alignEnd="@id/search_bar"
+        android:layout_marginStart="260dp"
+        android:background="@color/white"
+        android:fontFamily="sans-serif"
         android:text="@string/search"
-        />
+        android:textAlignment="viewStart"
+        android:textColor="#FF5722"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="100dp"
+        android:lineSpacingExtra="10sp"
+        android:text="@string/searchReadme"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 </RelativeLayout>

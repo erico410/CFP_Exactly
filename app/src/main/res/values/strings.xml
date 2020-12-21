@@ -11,18 +11,21 @@
     <string name="submission_deadlineCFP">CFP Submission Deadline</string>
     <string name="outlineCFP">CFP Outline</string>
 
-    <string name="ReadMe">Readme:\n\t
-        Interface:\n\t
-        main page\n\t
-        search bar\n\t
-        result data</string>
+    <string name="ReadMe">
+        OUTLINE: \n
+        welcome page \n
+        search page \n
+        search list page \n
+        search result page
+    </string>
     <string name="searchKeywords">Keywords here:</string>
     <string name="backMain">Main page</string>
     <string name="backSearchBar">Search bar</string>
     <string name="backList">Result List</string>
-    <string name="searchReadme">Push search to show\n
-        1. short name\n
-        2. full name of the CFP\n
+    <string name="searchReadme">
+        Click "Search" to show \n
+        1. Abbreviation \n
+        2. Title of the CFP \n
         3. Top three most related tags\n
     </string>
     <string name="RESULT_OF">Results of</string>

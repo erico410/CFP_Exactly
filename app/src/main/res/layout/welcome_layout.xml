@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/WelcomeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CB000000"
-    android:backgroundTint="#000000">
+    >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/searchBarBT"
-        android:fontFamily="sans-serif"
-        android:lineSpacingExtra="12sp"
-        android:text="@string/ReadMe"
-        android:textAlignment="textStart"
-        android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/white"
-        android:textSize="36sp"
-        android:typeface="normal" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/startBT"
+        android:layout_marginTop="45dp"
+        >
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="12sp"
+            android:text="@string/ReadMe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:typeface="normal" />
+    </ScrollView>
+
 
     <TextView
         android:id="@+id/AppName"
@@ -33,17 +38,17 @@
         android:textColor="@color/white"
         android:textSize="20pt" />
 
-    <Button
-        android:id="@+id/searchBarBT"
+    <ImageButton
+        android:id="@+id/startBT"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/AppName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="45dp"
+        android:background="#00000000"
         android:textSize="15pt"
-        app:icon="@drawable/首頁搜尋"
-        app:iconTint="#00FFFFFF"
-        app:iconTintMode="screen" />
+        android:src="@drawable/search_button"
+        />
 
 </RelativeLayout>

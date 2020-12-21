@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -29,6 +30,8 @@ public class SearchListActivity extends Activity {
 
     private ArrayList<CFPInfo> infoList;
 
+    private TextView searchInput;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,12 +39,16 @@ public class SearchListActivity extends Activity {
 
         searchList = (ListView) findViewById(R.id.searchList);
 
+        searchInput = (TextView) findViewById(R.id.searchInput);
+
         CFPDB = new DBHelper(this);
 
         Intent intent = getIntent();
         String query = intent.getStringExtra("query");
-        query = " WHERE " + " title LIKE '%" + query + "%' ";
 
+        searchInput.setText(query);
+
+        query = " WHERE " + " title LIKE '%" + query + "%' ";
         ArrayList<CFPInfo> itemList = CFPDB.getInfoByQuery(query);
         InfoListAdapter ada = new InfoListAdapter(this, R.layout.search_item, itemList);
         searchList.setAdapter(ada);
@@ -60,13 +67,20 @@ public class SearchListActivity extends Activity {
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-            TextView text = null;
+            RelativeLayout layout_item = null;
+            TextView abbreviation_text = null;
+            TextView title_text = null;
+            TextView key1 = null;
+            TextView key2 = null;
+            TextView key3 = null;
+
             if(convertView == null){
                 LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 convertView = inflater.inflate(R.layout.search_item, parent, false);
-                text = (TextView) convertView.findViewById(R.id.itemList);
-                convertView.setTag(text);
-                text.setOnClickListener(new View.OnClickListener() {
+
+                layout_item = (RelativeLayout) convertView.findViewById(R.id.layout_item);
+                convertView.setTag(layout_item);
+                layout_item.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         CFPInfo item = (CFPInfo) view.getTag();
@@ -76,13 +90,25 @@ public class SearchListActivity extends Activity {
                         startActivity(intent);
                     }
                 });
-            }else{
-                text = (TextView) convertView.getTag();
+            }
+            else{
+                layout_item = (RelativeLayout) convertView;
             }
 
+            abbreviation_text = (TextView) layout_item.findViewById(R.id.abbreviation_list);
+            title_text = (TextView) layout_item.findViewById(R.id.title_list);
+            key1 = (TextView) layout_item.findViewById(R.id.key1);
+            key2 = (TextView) layout_item.findViewById(R.id.key2);
+            key3 = (TextView) layout_item.findViewById(R.id.key3);
+
             CFPInfo current = infoList.get(position);
-            text.setText(current.getAbbreviation());
-            text.setTag(current);
+            abbreviation_text.setText(current.getAbbreviation());
+            title_text.setText(current.getTitle());
+            key1.setText("key1");
+            key2.setText("key2");
+            key3.setText("key3");
+            layout_item.setTag(current);
+
             return convertView;
         }
     }

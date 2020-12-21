@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SearchView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -28,11 +27,12 @@ public class SearchActivity extends Activity {
         searchBar.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                Intent intent = new Intent(getBaseContext(), SearchListActivity.class);
-                intent.setAction(Intent.ACTION_SEND);
-                intent.putExtra("query", s);
-                startActivity(intent);
-
+                if(!s.equals("")) {
+                    Intent intent = new Intent(getBaseContext(), SearchListActivity.class);
+                    intent.setAction(Intent.ACTION_SEND);
+                    intent.putExtra("query", s);
+                    startActivity(intent);
+                }
                 return false;
             }
 
@@ -45,10 +45,13 @@ public class SearchActivity extends Activity {
         searchBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(), SearchListActivity.class);
-                intent.setAction(Intent.ACTION_SEND);
-                intent.putExtra("query", searchBar.getQuery().toString());
-                startActivity(intent);
+                String s = searchBar.getQuery().toString();
+                if(!s.equals("")) {
+                    Intent intent = new Intent(getBaseContext(), SearchListActivity.class);
+                    intent.setAction(Intent.ACTION_SEND);
+                    intent.putExtra("query", s);
+                    startActivity(intent);
+                }
             }
         });
 

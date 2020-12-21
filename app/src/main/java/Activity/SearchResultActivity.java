@@ -38,6 +38,7 @@ public class SearchResultActivity extends Activity {
         CFP_submission_deadline_text = (TextView) findViewById(R.id.CFP_submission_deadline_text);
         CFP_outline_text = (TextView) findViewById(R.id.CFP_outline_text);
 
+
         Intent intent = getIntent();
         Integer eventId = intent.getIntExtra("eventId", 0);
 

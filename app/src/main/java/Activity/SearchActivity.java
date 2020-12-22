@@ -56,4 +56,8 @@ public class SearchActivity extends Activity {
         });
 
     }
+
+    public void back(View view){
+        finish();
+    }
 }

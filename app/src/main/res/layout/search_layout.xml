@@ -7,15 +7,16 @@
     android:background="#CD000000">
 
     <Button
-        android:id="@+id/backBT"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:text="@string/backMain"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#BEFFFFFF"
-        android:typeface="normal" />
+        android:textColor="#BE000000"
+        android:typeface="normal"
+        android:onClick="back"
+        />
 
     <TextView
         android:id="@+id/KeyWords"
@@ -44,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/search_bar"
         android:layout_alignEnd="@id/search_bar"
-        android:layout_marginStart="260dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:fontFamily="sans-serif"
         android:text="@string/search"
@@ -56,7 +57,7 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/search_bar"
         android:layout_marginTop="100dp"

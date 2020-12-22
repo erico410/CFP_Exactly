@@ -24,7 +24,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/white"
             android:textSize="26sp"
-            android:typeface="normal" />
+            android:typeface="normal"
+            android:textAlignment="center"/>
     </ScrollView>
 
 

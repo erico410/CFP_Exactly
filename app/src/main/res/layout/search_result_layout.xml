@@ -9,23 +9,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        >
     <Button
-        android:id="@+id/backListBT"
         style="@style/Widget.MaterialComponents.Button.TextButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/backList"
         android:textAlignment="viewStart"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#BEFFFFFF" />
+        android:textColor="#BE000000"
+        android:onClick="back"
+        />
 
     <TextView
         android:id="@+id/CFP_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/titleCFP"
-        android:textColor="#3F51B5" />
+        android:textColor="#3F51B5"
+        android:background="@android:drawable/title_bar"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/CFP_title_text"
@@ -33,92 +37,135 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#2196F3"
+        android:textStyle="bold"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:background="#CC000000"
+        />
 
     <TextView
         android:id="@+id/CFP_abbreviation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/abbreviationCFP"
-        android:textColor="#3F51B5" />
+        android:textColor="#3F51B5"
+        android:background="@android:drawable/title_bar"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/CFP_abbreviation_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#2196F3" />
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        android:background="#CC000000"
+        />
+
+    <TextView
+        android:id="@+id/CFP_BarChart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chartCFP"
+        android:textColor="#3F51B5"
+        android:background="@android:drawable/title_bar"
+        android:textSize="20sp"
+        />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/CFP_BarChart_noun"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
 
     <TextView
         android:id="@+id/CFP_url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/urlCFP"
-        android:textColor="#3F51B5" />
+        android:textColor="#3F51B5"
+        android:background="@android:drawable/title_bar"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/CFP_url_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#2196F3" />
-
-    <TextView
-        android:id="@+id/CFP_chart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/chartCFP"
-        android:textColor="#3F51B5" />
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        android:background="#CC000000"
+        />
 
     <TextView
         android:id="@+id/CFP_location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/locationCFP"
-        android:textColor="#3F51B5" />
+        android:textColor="#3F51B5"
+        android:background="@android:drawable/title_bar"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/CFP_location_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#2196F3"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="#CC000000"
+        />
 
     <TextView
         android:id="@+id/CFP_event_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/event_dateCFP"
-        android:textColor="#3F51B5" />
+        android:textColor="#3F51B5"
+        android:background="@android:drawable/title_bar"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/CFP_event_date_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#2196F3"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="#CC000000"
+        />
 
     <TextView
         android:id="@+id/CFP_submission_deadline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/submission_deadlineCFP"
-        android:textColor="#3F51B5" />
+        android:textColor="#3F51B5"
+        android:background="@android:drawable/title_bar"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/CFP_submission_deadline_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#2196F3"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:background="#CC000000"
+        />
 
     <TextView
         android:id="@+id/CFP_outline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/outlineCFP"
-        android:textColor="#3F51B5" />
+        android:textColor="#3F51B5"
+        android:background="@android:drawable/title_bar"
+        android:textSize="20sp"
+        />
 
     <TextView
         android:id="@+id/CFP_outline_text"
@@ -126,7 +173,10 @@
         android:layout_height="wrap_content"
         android:lineSpacingExtra="8sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:background="#CC000000"
+        />
 
 </LinearLayout>
 </ScrollView>

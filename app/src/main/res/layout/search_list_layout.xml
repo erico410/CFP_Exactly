@@ -7,16 +7,17 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/backSearchBarBT"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
         android:text="@string/backSearchBar"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#BEFFFFFF"
+        android:textColor="#BE000000"
         android:textSize="14sp"
-        android:typeface="normal" />
+        android:typeface="normal"
+        android:onClick="back"
+        />
 
     <TextView
         android:id="@+id/resultOfText"

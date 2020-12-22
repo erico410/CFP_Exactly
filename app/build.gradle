@@ -4,7 +4,7 @@ plugins {
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "30.0.2"
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
         applicationId 'com.cfp_exactly'
@@ -35,4 +35,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

@@ -17,6 +17,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "CFP_Exactly.db";
 
     private static final String INFO_TABLE = "CFPInfo";
+    private static final String NOUN_COUNTER_TABLE = "noun_counter";
 
     private static String DB_PATH = "/data/data/" +
             "com.cfp_exactly" + "/databases/";
@@ -63,7 +64,16 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public ArrayList<CFPInfo> getInfoByQuery(String query){
-        String selectQuery = "SELECT * FROM " + INFO_TABLE + query + " LIMIT 20";
+        String selectQuery = "SELECT DISTINCT " +
+                "CFPInfo._id, " +
+                "CFPInfo.title, " +
+                "CFPInfo.abbreviation, " +
+                "CFPInfo.url, " +
+                "CFPInfo.location, " +
+                "CFPInfo.event_date_begin, " +
+                "CFPInfo.event_date_end, " +
+                "CFPInfo.submission_deadline, " +
+                "CFPInfo.outline FROM " + INFO_TABLE + " INNER JOIN " + NOUN_COUNTER_TABLE + " ON CFPInfo._id = noun_counter._id " + query + " LIMIT 20";
 
         Log.v("getInfoByQuery", selectQuery);
         SQLiteDatabase db = this.getReadableDatabase();
@@ -89,6 +99,47 @@ public class DBHelper extends SQLiteOpenHelper {
         db.close();
 
         return list;
+    }
+
+    public ArrayList<String> getTopThreeKeywordsByEventId(Integer eventId){
+        String selectQuery = "SELECT category FROM " + NOUN_COUNTER_TABLE + " WHERE " + KEY_EVENT_ID + "=" + Integer.toString(eventId) + " ORDER BY counter DESC LIMIT 3 "  ;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        ArrayList<String> rtn = new ArrayList<>();
+
+        if(cursor.moveToFirst()) {
+            do {
+                String item = "";
+                item = cursor.getString(0);
+                rtn.add(item);
+            }while(cursor.moveToNext());
+        }
+        db.close();
+
+        return rtn;
+    }
+
+    public ArrayList<NounCounter> getTopFiveKeywordCounterByEventId(Integer eventId){
+        String selectQuery = "SELECT category, counter FROM " + NOUN_COUNTER_TABLE + " WHERE " + KEY_EVENT_ID + "=" + Integer.toString(eventId) + " ORDER BY counter DESC LIMIT 5 "  ;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        ArrayList<NounCounter> rtn = new ArrayList<>();
+
+        if(cursor.moveToFirst()) {
+            do {
+                NounCounter item = new NounCounter();
+                item.setNoun(cursor.getString(0));
+                item.setCounter(cursor.getInt(1));
+                rtn.add(item);
+            }while(cursor.moveToNext());
+        }
+        db.close();
+
+        return rtn;
     }
 
     @Override

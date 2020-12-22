@@ -2,7 +2,7 @@ from DBHelper import DBHelper
 import time
 
 EVENT_ID = "_id"
-CATEGORY = "catrgory"
+CATEGORY = "category"
 COUTNER = "counter"
 
 db = DBHelper()

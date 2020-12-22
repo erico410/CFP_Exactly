@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import Data.CFPInfo;
@@ -47,9 +49,18 @@ public class SearchListActivity extends Activity {
         String query = intent.getStringExtra("query");
 
         searchInput.setText(query);
+        ArrayList<String> querylist = new ArrayList<>(Arrays.asList(query.split(" ")));
+        query = "";
+        boolean first = true;
+        for(int i = 0; i < querylist.size(); ++i){
+            if(first)first = false;
+            else query += " OR ";
+            query += " title LIKE '%" + querylist.get(i) + "%' OR category LIKE '%" + querylist.get(i) + "%' ";
+        }
+        query = " WHERE " + query + " ORDER BY counter DESC ";
 
-        query = " WHERE " + " title LIKE '%" + query + "%' ";
         ArrayList<CFPInfo> itemList = CFPDB.getInfoByQuery(query);
+
         InfoListAdapter ada = new InfoListAdapter(this, R.layout.search_item, itemList);
         searchList.setAdapter(ada);
     }
@@ -104,13 +115,19 @@ public class SearchListActivity extends Activity {
             CFPInfo current = infoList.get(position);
             abbreviation_text.setText(current.getAbbreviation());
             title_text.setText(current.getTitle());
-            key1.setText("key1");
-            key2.setText("key2");
-            key3.setText("key3");
+            ArrayList<String> keywords = CFPDB.getTopThreeKeywordsByEventId(current.getEventId());
+            if(keywords.size() == 3){
+                key1.setText(keywords.get(0));
+                key2.setText(keywords.get(1));
+                key3.setText(keywords.get(2));
+            }
             layout_item.setTag(current);
 
             return convertView;
         }
     }
 
+    public void back(View view){
+        finish();
+    }
 }

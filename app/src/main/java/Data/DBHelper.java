@@ -121,8 +121,8 @@ public class DBHelper extends SQLiteOpenHelper {
         return rtn;
     }
 
-    public ArrayList<NounCounter> getTopFiveKeywordCounterByEventId(Integer eventId){
-        String selectQuery = "SELECT category, counter FROM " + NOUN_COUNTER_TABLE + " WHERE " + KEY_EVENT_ID + "=" + Integer.toString(eventId) + " ORDER BY counter DESC LIMIT 5 "  ;
+    public ArrayList<NounCounter> getKeywordCounterByEventId(Integer eventId){
+        String selectQuery = "SELECT category, counter FROM " + NOUN_COUNTER_TABLE + " WHERE " + KEY_EVENT_ID + "=" + Integer.toString(eventId) + " ORDER BY counter DESC LIMIT 10 "  ;
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);

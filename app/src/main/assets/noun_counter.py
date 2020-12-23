@@ -42,6 +42,6 @@ for info in cursor_info:
                     )".format(info[0], noun, nouns)
             )
             db.query(insert_query)
-            db.commit()
-
+            
+db.commit()
 db.close()

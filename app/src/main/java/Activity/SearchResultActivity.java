@@ -86,7 +86,7 @@ public class SearchResultActivity extends Activity {
         CFP_abbreviation_text.setText(result.getAbbreviation());
         // chart
         initCFPBarChart();
-        ArrayList<NounCounter> arrayList = CFPDB.getTopFiveKeywordCounterByEventId(eventId);
+        ArrayList<NounCounter> arrayList = CFPDB.getKeywordCounterByEventId(eventId);
         showCFPBarChart(arrayList, "Noun Chart", Color.YELLOW);
 
         CFP_url_text.setText(result.getUrl());
